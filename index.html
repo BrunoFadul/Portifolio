@@ -375,6 +375,20 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Animação suave ao surgir as seções na tela
+      const sections = document.querySelectorAll(".section");
+      const observerOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach((section) => observer.observe(section));
     </script>
   </body>
 </html>

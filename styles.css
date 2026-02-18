@@ -21,6 +21,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   margin: 0;
@@ -458,6 +462,15 @@ img {
 
 .section {
   margin-top: 52px;
+  scroll-margin-top: 90px;
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s ease-out, transform 0.75s ease-out;
+}
+
+.section.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .section-header {
