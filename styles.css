@@ -21,10 +21,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 html,
 body {
   margin: 0;
@@ -462,15 +458,6 @@ img {
 
 .section {
   margin-top: 52px;
-  scroll-margin-top: 90px;
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.75s ease-out, transform 0.75s ease-out;
-}
-
-.section.in-view {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .section-header {
@@ -651,8 +638,12 @@ img {
   color: var(--text-soft);
 }
 
+.education-card + .education-card {
+  margin-top: 10px;
+}
+
 .education-card {
-  padding: 18px 16px;
+  padding: 18px 20px;
   border-radius: var(--radius-md);
   border: 1px solid rgba(148, 163, 184, 0.6);
   background: linear-gradient(
@@ -741,6 +732,51 @@ img {
   text-decoration: underline;
   text-decoration-color: rgba(129, 140, 248, 0.7);
   text-underline-offset: 3px;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.btn-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none !important;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.btn-contact:hover {
+  transform: translateY(-1px);
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: white;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+}
+
+.btn-whatsapp:hover {
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.5);
+}
+
+.btn-linkedin {
+  background: #0a66c2;
+  color: white;
+  box-shadow: 0 8px 20px rgba(10, 102, 194, 0.4);
+}
+
+.btn-linkedin:hover {
+  box-shadow: 0 12px 28px rgba(10, 102, 194, 0.5);
 }
 
 .btn-full {

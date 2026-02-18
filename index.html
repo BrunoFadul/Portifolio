@@ -314,6 +314,16 @@
               banco de dados e gestão de projetos.
             </p>
           </article>
+          <article class="education-card">
+            <h3>Pós graduação em Testes Ágeis de Software</h3>
+            <p class="education-school">Uninassau</p>
+            <p class="education-period">fev. 2026 — cursando</p>
+            <p>
+              Durante o curso tive vivência com as seguintes disciplinas: Devops, engenharia de software, Gestão agil de projetos, 
+              lean UX, Planejamento e design de Testes, Sistemas de Detecção e prevenção de intrusão, Teste de API, Teste de software, 
+              Teste de performance, Testes de Sistema, Testes unitários.
+            </p>
+          </article>
         </div>
       </section>
 
@@ -338,9 +348,23 @@
                 <span class="contact-label">Endereço</span>
                 <span>QN 104 Conjunto 1 Bloco 6 apt 201 — Samambaia Sul</span>
               </li>
-              <li>
-                <span class="contact-label">Perfil</span>
-                <span>@BrunoEneas</span>
+              <li class="contact-buttons">
+                <a
+                  class="btn-contact btn-whatsapp"
+                  href="https://wa.me/5561984537749"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  WhatsApp
+                </a>
+                <a
+                  class="btn-contact btn-linkedin"
+                  href="https://www.linkedin.com/in/bruno-en%C3%A9as-9947b8233/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>
               </li>
             </ul>
           </div>
@@ -375,20 +399,6 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
-
-      // Animação suave ao surgir as seções na tela
-      const sections = document.querySelectorAll(".section");
-      const observerOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("in-view");
-          }
-        });
-      }, observerOptions);
-
-      sections.forEach((section) => observer.observe(section));
     </script>
   </body>
 </html>
